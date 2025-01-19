@@ -6,4 +6,4 @@ RUN pip install playwright && \
     pip install --no-deps pypi-examiner && \
     git clone https://github.com/tweedge/pypi-examiner /opt
 
-RUN ["pytest", "/opt/pypi-examiner"]
+ENTRYPOINT ["pytest", "/opt/pypi-examiner"]
