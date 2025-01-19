@@ -7,4 +7,4 @@
 
 Python 3.12-slim with [Playwright](https://playwright.dev/python/docs/docker) and [requests-htmlc](https://github.com/cboin1996/requests-html) built in. I couldn't get the original requests-html to work reliably (depends on pyppeteer but seems to ignore a lot of pyppeteer environment variables) - but for my case (hopefully yours too!) requests-htmlc will work.
 
-Pretty large image. Root by default. Tested before push. Clone and build your own if you want stability or recency.
+Pretty large image. Root by default (may not be desirable for scraping arbitrary websites - consider the ramifications of an escape and mitigate appropriately). Tested before push. Clone and build your own if you want stability or recency.
