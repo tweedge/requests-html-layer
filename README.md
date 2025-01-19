@@ -5,6 +5,8 @@
 [![Written By](https://img.shields.io/badge/written%20by-some%20nerd-red.svg)](https://chris.partridge.tech)
 [![Author Also Writes On](https://img.shields.io/mastodon/follow/108210086817505115?domain=https%3A%2F%2Fcybersecurity.theater)](https://cybersecurity.theater/@tweedge)
 
-Python 3.12-slim with [Playwright](https://playwright.dev/python/docs/docker) and [requests-htmlc](https://github.com/cboin1996/requests-html) built in. I couldn't get the original requests-html to work reliably (depends on pyppeteer but seems to ignore a lot of pyppeteer environment variables) - but for my case (hopefully yours too!) requests-htmlc will work.
+Python 3.12-slim with [Playwright](https://playwright.dev/python/docs/docker) and [requests-htmlc](https://github.com/cboin1996/requests-html) built in.
 
-Pretty large image. Root by default (may not be desirable for scraping arbitrary websites - consider the ramifications of an escape and mitigate appropriately). Tested before push. Clone and build your own if you want stability or recency.
+I couldn't get the original [requests-html](https://github.com/psf/requests-html) to work reliably - the original depends on [pyppeteer](https://github.com/pyppeteer/pyppeteer) but seems to [ignore pyppeteer environment variables])https://github.com/psf/requests-html/issues/387). For my case requests-htmlc works as a drop-in replacement.
+
+Pretty large image. Works as a on-root user. Tested before push. Clone and build your own if you want stability or recency.

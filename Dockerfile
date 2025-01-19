@@ -2,9 +2,10 @@ FROM python:3.12-bookworm
 
 RUN pip install playwright && \
     playwright install --with-deps && \
-    adduser --create-home nonroot
+    useradd -ms /bin/bash nonroot
 
 USER nonroot
+WORKDIR /home/nonroot
 
 RUN pip install requests-htmlc pytest && \
     pip install --no-deps pypi-examiner && \
