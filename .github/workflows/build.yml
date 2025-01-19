@@ -19,8 +19,20 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           load: true
-          tags: requests-html-layer
+          tags: tweedge/requests-html-layer:latest
 
       - name: Test
         run: |
-          docker run --rm requests-html-layer
+          docker run --rm tweedge/requests-html-layer:latest
+
+      - name: Push
+        uses: docker/build-push-action@v6
+        with:
+          load: true
+          push: true
+          tags: tweedge/requests-html-layer:latest
+
+      - name: Generate SBOM for image
+        uses: anchore/sbom-action@v0
+        with:
+          image: tweedge/requests-html-layer:latest
