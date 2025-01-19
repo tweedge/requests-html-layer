@@ -4,7 +4,7 @@ FROM python:3.12-bookworm
 RUN pip install playwright && \
     playwright install --with-deps && \
     useradd -ms /bin/bash nonroot && \
-    mv /home/root/.cache/ /home/nonroot/.cache/ && \
+    mv /root/.cache/ /home/nonroot/.cache/ && \
     chown -R nonroot:nonroot /home/nonroot/.cache/
 
 # switch to nonroot user and apply all the environment variables we need for local packages
