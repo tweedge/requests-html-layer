@@ -10,3 +10,11 @@ Python 3.12-slim with [Playwright](https://playwright.dev/python/docs/docker) an
 I couldn't get the original [requests-html](https://github.com/psf/requests-html) to work reliably - the original depends on [pyppeteer](https://github.com/pyppeteer/pyppeteer) but seems to [ignore pyppeteer environment variables](https://github.com/psf/requests-html/issues/387). For my case requests-htmlc works as a drop-in replacement.
 
 Pretty large image. Works as a non-root user. Tested before push. Clone and build your own if you want stability or recency. :)
+
+## Environment
+
+* User: `nonroot`
+* Workdir: `/home/nonroot`
+* Shell: `/bin/bash`
+
+Load your code wherever, set your entrypoint, and enjoy.
