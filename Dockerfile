@@ -13,4 +13,6 @@ RUN pip install requests-htmlc pytest && \
     git clone https://github.com/tweedge/pypi-examiner && \
     rm -rf pypi-examiner/.git
 
+ENV PATH="$PATH:/home/nonroot/.local/bin"
+
 ENTRYPOINT ["pytest", "/home/nonroot/pypi-examiner"]
